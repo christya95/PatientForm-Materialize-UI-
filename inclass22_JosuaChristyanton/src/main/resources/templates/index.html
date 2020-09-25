@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Import the Materialize Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!-- Import fonts from Googlefonts-->
+<link
+	href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+	rel="stylesheet">
+
+<!-- Compiled and minified JavaScript -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<style>
+p {
+	color: #424242;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: 'Indie Flower', cursive;
+}
+
+div.input-field>label {
+	color: #424242;
+}
+
+html {
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: linear-gradient(#9575cd, #0097a7) no-repeat 100%;
+	margin: 0px;
+}
+</style>
+
+</head>
+<body>
+	<!-- Retrieve all the appropriate information for patients -->
+
+	<div class="container">
+		<div class="#9fa8da indigo lighten-3">
+			<p class="center-align">Please enter all required information.</p>
+		</div>
+
+		<!-- Create a card style around the container for the form -->
+		<div class="card-panel #bbdefb blue lighten-4">
+			<form method="post" action="/processForm">
+
+				<!-- Each input field with label and icons -->
+				<div>
+					<div class=input-field>
+						<i class="material-icons prefix">account_circle</i> <input
+							id="patient_id" type="text" name="patient_id" /><br> <label
+							for="patient_id">Patient ID:</label>
+					</div>
+					<div class=input-field>
+						<i class="material-icons prefix">hotel</i> <input
+							id="patient_name" type="text" name="patient_name" /><br> <label
+							for="patient_name">Patient Name:</label>
+					</div>
+					<div class=input-field>
+						<i class="material-icons prefix">local_pharmacy</i> <input
+							id="doctor_id" type="text" name="doctor_id" /><br> <label
+							for="doctor_id">Doctor ID:</label>
+					</div>
+					<div class=input-field>
+						<i class="material-icons prefix">assignment_ind</i> <input
+							id="patient_history" type="text" name="patient_history" /><br>
+						<label for="patient_history">Patient History:</label>
+					</div>
+
+					<input class="waves-effect waves-red btn-small" type="submit"
+						value="Submit!" />
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
